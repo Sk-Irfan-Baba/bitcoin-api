@@ -5,6 +5,7 @@ import numpy as np
 import tensorflow as tf
 import joblib
 from pydantic import BaseModel
+import pandas as pd
 
 app = FastAPI()
 
@@ -72,3 +73,4 @@ async def predict(ticker: str):
 
     except Exception as e:
         return {"error": str(e)}
+    
